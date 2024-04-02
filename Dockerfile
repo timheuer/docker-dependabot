@@ -16,7 +16,7 @@ FROM container-registry.oracle.com/database/free:23.3.0.0
 
 # PostgreSQL
 FROM postgres:16.2
-FROM dpage/pgadmin4:8.3
+FROM dpage/pgadmin4:8.4
 
 # RabbitMQ
 FROM rabbitmq:3
