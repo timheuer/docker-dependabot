@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  kafka:
+    image: confluentinc/confluent-local:7.6.0
+
+  mongo:
+    image: mongo:7.0.5
+
+  mongo-express:
+    image: mongo-express:1.0.2-20
+    depends_on:
+      - mongo
+
+  mysql:
+    image: mysql:8.3.0
+
+  nats:
+    image: nats:2
+
+  oracle:
+    image: container-registry.oracle.com/database/free:23.3.0.0
+
+  postgres:
+    image: postgres:16.2
+
+  pgadmin:
+    image: dpage/pgadmin4:8.3
+    depends_on:
+      - postgres
+
+  rabbitmq:
+    image: rabbitmq:3
+
+  rabbitmq-management:
+    image: rabbitmq:3-management
+
+  redis:
+    image: redis:7.2.4
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    depends_on:
+      - redis
+
+  seq:
+    image: datalust/seq:2024.1
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
